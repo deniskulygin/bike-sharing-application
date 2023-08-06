@@ -5,16 +5,11 @@ namespace App\Data;
 
 class BikerInfo
 {
-    private readonly int $count;
-    private readonly float $latitude;
-    private readonly float $longitude;
-    
-    public function __construct(int $count, float $latitude, float $longitude)
-    {
-        $this->count = $count;
-        $this->latitude = $latitude;
-        $this->longitude = $longitude;
-    }
+    public function __construct(
+        private readonly int $count,
+        private readonly float $latitude,
+        private readonly float $longitude
+    ) {}
     
     public function getCount(): int
     {

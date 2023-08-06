@@ -5,17 +5,12 @@ namespace App\Data;
 
 class ShortestDistance
 {
-    private readonly string $name;
-    private readonly float $distance;
-    private readonly int $freeBikeCount;
-    private readonly int $bikerCount;
-    
-    public function __construct(string $name, float $distance, int $freeBikeCount, int $bikerCount)
-    {
-        $this->name = $name;
-        $this->distance = $distance;
-        $this->freeBikeCount = $freeBikeCount;
-        $this->bikerCount = $bikerCount;
+    public function __construct(
+        private readonly string $name,
+        private readonly float $distance,
+        private readonly int $freeBikeCount,
+        private readonly int $bikerCount
+    ) {
     }
     
     public function getName(): string

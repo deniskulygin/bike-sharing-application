@@ -5,12 +5,8 @@ namespace App\Data;
 
 class City
 {
-    private readonly string $resource;
-    
-    public function __construct(string $resource)
-    {
-        $this->resource = $resource;
-    }
+    public function __construct(private readonly string $resource)
+    {}
     
     public function getResource(): string
     {

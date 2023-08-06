@@ -12,7 +12,6 @@ use App\Retriever\ApiConfigRetriever;
 class ApiManager
 {
     protected static self|null $instance = null;
-    private readonly Client $client;
 
     final protected function __clone() { }
     
@@ -24,10 +23,9 @@ class ApiManager
         throw new \Exception("Cannot unserialize singleton");
     }
 
-    final protected function __construct()
-    {
-        $this->client = new Client();
-    }
+    final protected function __construct(
+        private readonly Client $client = new Client())
+    {}
     
     /**
      * @return array

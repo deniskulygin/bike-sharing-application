@@ -7,12 +7,9 @@ class BikersParserFactory
 {
     public function createParser(string $format): BikersParserInterface
     {
-        if ($format === 'csv') {
-            $parser = new CsvBikersParser();
-        } else {
-            throw new \LogicException('Unsupported bikers source file');
-        }
-        
-        return $parser;
+        return match ($format) {
+            'csv' => new CsvBikersParser(),
+            default => throw new \LogicException('Unsupported bikers source file'),
+        };
     }
 }

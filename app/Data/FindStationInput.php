@@ -5,12 +5,8 @@ namespace App\Data;
 
 class FindStationInput
 {
-    private readonly string $city;
-    
-    public function __construct(string $city)
-    {
-        $this->city = $city;
-    }
+    public function __construct(public string $city)
+    {}
     
     public function getCity(): string
     {

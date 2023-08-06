@@ -33,10 +33,10 @@ class DistanceService
                 }
             }
             $shortestDistances->addShortestDistance(new ShortestDistance(
-                $closestStationName,
-                $shortestDistance,
-                $freeBikeCount,
-                $bikerCount
+                name: $closestStationName,
+                distance: $shortestDistance,
+                freeBikeCount: $freeBikeCount,
+                bikerCount: $bikerCount
             ));
         }
         

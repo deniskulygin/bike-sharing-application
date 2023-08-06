@@ -26,10 +26,10 @@ class StationService
             foreach ($cityStations['network']['stations'] as $station) {
                 $stations->addStation(
                     new Station(
-                        $station['name'],
-                        (float) $station['latitude'],
-                        (float) $station['longitude'],
-                        $station['free_bikes']
+                        name: $station['name'],
+                        latitude: (float) $station['latitude'],
+                        longitude: (float) $station['longitude'],
+                        freeBikes: $station['free_bikes']
                     )
                 );
             }
